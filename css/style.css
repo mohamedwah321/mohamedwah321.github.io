@@ -1,4 +1,14 @@
-/* 1. صفحة الهبوط */
+/* ===== Global Resets ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* ===== 1. Landing Page ===== */
 #landing {
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
@@ -20,16 +30,17 @@
   padding: 1rem 2rem;
   border-radius: 0.5rem;
   text-align: center;
+  max-width: 90%;
 }
 
-/* 2. إخفاء المحتوى الرئيسي في البداية */
+/* ===== 2. Hide Main Content Initially ===== */
 #main-content {
   display: none;
 }
 
-/* 3. ستايل شريط التنقل */
+/* ===== 3. Navigation Bar ===== */
 nav {
-  background: #ffffffcc;
+  background: #ffffffcc;      /* شفافية بسيطة */
   position: sticky;
   top: 0;
   z-index: 100;
@@ -39,33 +50,49 @@ nav ul {
   display: flex;
   justify-content: center;
   list-style: none;
-  margin: 0; padding: 0;
 }
 nav ul li + li {
   margin-left: 1rem;
 }
+
+/* ===== 4. Nav Links as Icons/Buttons ===== */
 nav ul li a {
+  display: inline-block;
+  font-size: 1.2rem;             /* تكبير نص الأيقونات */
+  padding: 0.75rem 1.25rem;      /* مساحة داخلية أوسع */
+  background-color: #8B4513;     /* لون بني */
+  color: #fff;                   /* نص أبيض */
+  border-radius: 0.25rem;
   text-decoration: none;
-  font-weight: bold;
-  color: #007ACC;
+  transition: background 0.3s ease;
+}
+nav ul li a:hover {
+  background-color: #A0522D;     /* بني أفتح عند المرور */
+}
+/* لو تضيف أيقونات (<i>) داخل الروابط */
+nav ul li a i {
+  font-size: 1.5rem;
+  vertical-align: middle;
+  margin-right: 0.5rem;
 }
 
-/* 4. واجهة الهيرو (صورة مركزية) */
+/* ===== 5. Hero Section (Central Avatar) ===== */
 .hero {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh; /* ارتفاع تقريبي */
+  height: 80vh;                  /* تقريب ارتفاع الشاشة */
+  background: #f9f9f9;           /* خلفية خفيفة للتباين */
 }
 .hero .avatar {
-  width: 200px;
-  height: 200px;
+  width: 260px;                  /* تكبير الصورة */
+  height: 260px;
   object-fit: cover;
   border-radius: 50%;
-  border: 4px solid #007ACC;
+  border: 5px solid #007ACC;     /* إطار أزرق */
 }
 
-/* 5. الأقسام الفارغة (سنملؤها لاحقاً) */
+/* ===== 6. Placeholder Content Sections ===== */
 .content-section {
   min-height: 60vh;
   padding: 2rem 1rem;
