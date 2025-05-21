@@ -5,15 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mohammed Wahdan – Electrical Power Engineer</title>
   <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/main.js"></script>
 </head>
 <body>
 
-  <!-- Header & Navigation -->
-  <header>
+  <!-- ===== 1. Landing Page ===== -->
+  <div id="landing">
+    <img src="images/door-bg.png" alt="Door Background" id="landing-image" />
+    <div class="overlay-text">
+      Click on the door to open new horizons for you
+    </div>
+  </div>
+
+  <!-- ===== 2. Main Content ===== -->
+  <div id="main-content">
+    <!-- Navigation -->
     <nav>
       <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About / CV</a></li>
+        <li><a href="#cv">CV</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#courses">Courses</a></li>
@@ -21,158 +30,20 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-  </header>
 
-  <!-- Home / Hero Section -->
-  <section id="home" class="hero">
-    <img src="images/avatar.png" alt="Mohammed Wahdan" />
-    <h1>Electrical Power Engineer</h1>
-    <p>Over 6 years of hands-on experience in industrial and infrastructure projects</p>
-    <a class="btn" href="assets/resume.pdf" download>Download CV (PDF)</a>
-  </section>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <img src="images/avatar.png" alt="Mohammed Wahdan" class="avatar" />
+    </section>
 
-  <!-- About / CV -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      Electrical Power Engineer with over 6 years of hands-on experience in maintenance, operation, testing and commissioning of electrical systems within industrial and infrastructure projects across Egypt and Saudi Arabia. Specialized in PLC programming, RO systems, fire alarm systems, and electrical panel design. Committed to delivering efficient, safe, and reliable electrical solutions.
-    </p>
-    <ul class="personal-info">
-      <li><strong>Email:</strong> <a href="mailto:mohammedwahdan321@gmail.com">mohammedwahdan321@gmail.com</a></li>
-      <li><strong>Phone:</strong> +20 101 737 8699 / +966 508 378 517</li>
-      <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/mohammed-wahdan-2018mmw/" target="_blank">mohammed-wahdan-2018mmw</a></li>
-      <li><strong>Location:</strong> Fisalia, Sakaka City, Al-Jouf, Saudi Arabia</li>
-      <li><strong>Date of Birth:</strong> 29 September 1995</li>
-      <li><strong>Marital Status:</strong> Married</li>
-      <li><strong>Military Service:</strong> Exempted</li>
-    </ul>
-  </section>
-
-  <!-- Experience -->
-  <section id="experience">
-    <h2>Professional Experience</h2>
-
-    <div class="job">
-      <h3>Operation & Maintenance Engineer</h3>
-      <span class="company">ESAF Limited Company – Saudi Arabia</span>
-      <span class="date">Apr 2024 – Present</span>
-      <ul>
-        <li>Maintain water pump station panels and RO station control systems</li>
-        <li>Service sewage pumping stations and well pump panels</li>
-        <li>Upkeep ATS and diesel generator systems</li>
-        <li>Test & commission pumping stations in housing projects</li>
-        <li>Write technical reports and prepare preventive maintenance schedules</li>
-      </ul>
-    </div>
-
-    <div class="job">
-      <h3>Electrical Engineer</h3>
-      <span class="company">AgriT for Technology – Egypt</span>
-      <span class="date">Jun 2021 – Apr 2024</span>
-      <strong>Site Engineer</strong>
-      <ul>
-        <li>Tested & commissioned control and power panels for fogging, fertigation & solar systems</li>
-        <li>Performed routine & emergency maintenance of water treatment systems</li>
-        <li>Troubleshot faults in panels, PLCs & field instruments</li>
-      </ul>
-      <strong>Technical Office Engineer</strong>
-      <ul>
-        <li>Prepared BOQs, technical proposals & shop drawings</li>
-        <li>Programmed & tested PLCs and HMIs for automated irrigation systems</li>
-      </ul>
-    </div>
-
-    <div class="job">
-      <h3>Electrical Engineer</h3>
-      <span class="company">Mohammed Naguib Military Base – Egypt</span>
-      <span class="date">Sep 2019 – Jun 2021</span>
-      <strong>Site Engineer</strong>
-      <ul>
-        <li>Installed & tested low-voltage underground power cables</li>
-        <li>Commissioned power & control panels; troubleshot electrical issues</li>
-      </ul>
-      <strong>Site Manager</strong>
-      <ul>
-        <li>Managed project planning, resource coordination & schedules</li>
-        <li>Oversaw daily operations, labor productivity & materials usage</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Projects -->
-  <section id="projects">
-    <h2>Projects & Internships</h2>
-
-    <div class="project">
-      <h3>Solar Power Irrigation System (Graduation Project)</h3>
-      <p>Developed an irrigation system using PV panels with MPPT control to maximize water-pumping efficiency.</p>
-    </div>
-
-    <div class="project">
-      <h3>Internship – Sidi Krir Power Station</h3>
-      <p>Assisted in maintenance and operational testing of steam turbines; learned power plant instrumentation and safety rounds.</p>
-    </div>
-
-    <div class="project">
-      <h3>Internship – InterCement (Amreyah Cement)</h3>
-      <p>Gained hands-on experience in MCC maintenance and troubleshooting of production-line electrical systems.</p>
-    </div>
-
-    <div class="project">
-      <h3>Internship – LORD International</h3>
-      <p>Worked on PLC diagnostics and observed electrical safety practices on automated production lines.</p>
-    </div>
-  </section>
-
-  <!-- Courses -->
-  <section id="courses">
-    <h2>Training Courses</h2>
-    <ul>
-      <li>Power Systems Distribution</li>
-      <li>Classical Control</li>
-      <li>PLC, HMI & SCADA</li>
-      <li>PMP Preparation Course</li>
-      <li>Motor Drives</li>
-      <li>Microcontrollers & C Programming</li>
-    </ul>
-  </section>
-
-  <!-- Skills -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <h3>Languages</h3>
-    <ul>
-      <li>Arabic – Native</li>
-      <li>English – Very Good</li>
-    </ul>
-    <h3>Technical</h3>
-    <ul>
-      <li>AutoCAD 2D</li>
-      <li>Dialux</li>
-      <li>Proteus</li>
-      <li>TIA Portal (Siemens)</li>
-      <li>EKTS</li>
-    </ul>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <form action="mailto:mohammedwahdan321@gmail.com" method="post" enctype="text/plain">
-      <input type="text" name="Name" placeholder="Your Name" required />
-      <input type="email" name="Email" placeholder="Your Email" required />
-      <textarea name="Message" placeholder="Your Message" rows="5"></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Mohammed Wahdan</p>
-    <div class="social">
-      <a href="https://www.linkedin.com/in/mohammed-wahdan-2018mmw/" target="_blank">LinkedIn</a>
-    </div>
-  </footer>
+    <!-- Placeholder sections (سنضيف المحتوى لاحقاً) -->
+    <section id="cv" class="content-section"> <!-- empty for now --> </section>
+    <section id="experience" class="content-section"> </section>
+    <section id="projects" class="content-section"> </section>
+    <section id="courses" class="content-section"> </section>
+    <section id="skills" class="content-section"> </section>
+    <section id="contact" class="content-section"> </section>
+  </div>
 
 </body>
 </html>
