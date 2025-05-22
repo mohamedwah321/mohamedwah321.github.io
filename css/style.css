@@ -2,12 +2,14 @@
    Variables & Global Resets
    ================================ */
 :root {
-  --color-primary:   #007ACC;
-  --color-primary-d: #005A99;
-  --color-brown:     #8B4513;
-  --color-brown-h:   #A0522D;
-  --nav-bg:          rgba(255,255,255,0.8);
-  --hero-bg:         #f9f9f9;
+  --color-primary:          #007ACC;
+  --color-primary-darker:   #005A99;
+  --color-brown:            #8B4513;
+  --color-brown-hover:      #A0522D;
+  --nav-bg:                 rgba(255,255,255,0.8);
+  --hero-bg:                #f9f9f9;
+  --color-cv-bg:            #4682B4;   /* Dark sky-blue */
+  --color-cv-title-bg:      #87CEEB;   /* Light sky-blue */
 }
 
 * {
@@ -25,7 +27,7 @@ body {
    ================================ */
 #landing {
   position: fixed;
-  inset: 0;            /* shorthand for top/right/bottom/left = 0 */
+  inset: 0;
   cursor: pointer;
 }
 #landing img {
@@ -38,12 +40,12 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  color: #fff;
-  font-size: clamp(1rem, 2.5vw, 2.5rem);
   background: rgba(0,0,0,0.6);
+  color: #fff;
   padding: 1rem 2rem;
   border-radius: 0.5rem;
   text-align: center;
+  font-size: clamp(1rem,2.5vw,2.5rem);
   max-width: 90%;
 }
 
@@ -87,9 +89,8 @@ nav ul li a {
   transition: background 0.3s ease;
 }
 nav ul li a:hover {
-  background-color: var(--color-brown-h);
+  background-color: var(--color-brown-hover);
 }
-/* إذا استعملت أيقونات (<i>) داخل الروابط */
 nav ul li a i {
   font-size: 1.5rem;
   vertical-align: middle;
@@ -120,7 +121,7 @@ nav ul li a i {
 .content-section {
   min-height: 60vh;
   padding: 2rem 1rem;
-  display: none;       /* إخفاؤها افتراضياً، ثم نظهرها بالـJS */
+  display: none;
 }
 
 /* ================================
@@ -143,24 +144,34 @@ nav ul li a i {
   font-size: 1.25rem;
   padding: 1rem;
 }
-.cv-btn {
-  font-size: 2.25rem;
-  padding: 1.5rem 3rem;
-  margin: 0 auto;
-}
-.btn-download:hover,
-.cv-btn:hover {
-  background-color: var(--color-primary-d);
+.btn-download:hover {
+  background-color: var(--color-primary-darker);
 }
 
 /* ================================
    8. CV Page Specific Styles
    ================================ */
 #cv-page {
+  background-color: var(--color-cv-bg);
   text-align: center;
   padding: 4rem 1rem;
 }
 .cv-title {
+  background-color: var(--color-cv-title-bg);
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  margin: 3rem auto 2rem;
   font-size: 3rem;
-  margin: 3rem 0 2rem;
+  color: #000;
+}
+.cv-btn {
+  /* Enlarge by 4× */
+  transform: scale(4);
+  transform-origin: center;
+  display: block;
+  margin: 2rem auto;
+}
+.cv-btn:hover {
+  background-color: var(--color-primary-darker);
 }
