@@ -175,3 +175,7 @@ nav ul li a i {
 .cv-btn:hover {
   background-color: var(--color-primary-darker);
 }
+/* Show the CV section on its standalone page */
+#cv-page {
+  display: block;
+}
