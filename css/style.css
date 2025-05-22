@@ -97,3 +97,20 @@ nav ul li a i {
   min-height: 60vh;
   padding: 2rem 1rem;
 }
+/* ===== Download CV Button ===== */
+.btn-download {
+  display: block;                /* ليملأ عرضًا مع التحكم بالهامش */
+  width: 220px;                  /* يمكنك تعديل العرض حسب الرغبة */
+  margin: 2rem auto;             /* مسافة فوق وتحت، ومركّز أفقيًا */
+  padding: 1rem;                 /* مساحة داخلية */
+  background-color: #007ACC;     /* أزرق واضح */
+  color: #fff;                   /* نص أبيض */
+  text-align: center;            /* تمركز النص */
+  font-size: 1.25rem;            /* حجم الخط */
+  border-radius: 0.5rem;         /* حواف منحنية */
+  text-decoration: none;         /* إزالة الخط السفلي */
+  transition: background 0.3s;
+}
+.btn-download:hover {
+  background-color: #005A99;     /* أزرق أغمق عند المرور */
+}
