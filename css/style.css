@@ -155,6 +155,8 @@ nav ul li a i {
    ================================ */
 body.cv-page {
   background-color: var(--color-cv-bg);
+  background: url("../images/cv-bg.jpg") no-repeat center center;
+  background-size: cover;
 }
 #cv-page {
   display: block;   /* override لإظهار القسم */
