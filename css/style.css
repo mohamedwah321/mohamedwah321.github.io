@@ -114,3 +114,30 @@ nav ul li a i {
 .btn-download:hover {
   background-color: #005A99;     /* أزرق أغمق عند المرور */
 }
+/* ===== CV Page Styles ===== */
+.cv-title {
+  font-size: 3rem;       /* ثلاث أضعاف الحجم الافتراضي */
+  text-align: center;
+  margin: 3rem 0 2rem;
+}
+
+.cv-btn {
+  display: inline-block;
+  font-size: 2.25rem;    /* ثلاث أضعاف btn الأساسي (~0.75rem) */
+  padding: 1.5rem 3rem;
+  margin: 0 auto;
+  background-color: #007ACC;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  transition: background 0.3s;
+}
+.cv-btn:hover {
+  background-color: #005A99;
+}
+
+/* وسّع أيضاً صندوق المحتوى إن لزم */
+#cv-page {
+  text-align: center;
+  padding: 4rem 1rem;
+}
