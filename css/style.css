@@ -91,6 +91,8 @@ nav ul li a {
 nav ul li a:hover {
   background-color: var(--color-brown-hover);
 }
+
+/* أيقونات داخل الروابط */
 nav ul li a i {
   font-size: 1.5rem;
   vertical-align: middle;
@@ -151,8 +153,11 @@ nav ul li a i {
 /* ================================
    8. CV Page Specific Styles
    ================================ */
-#cv-page {
+body.cv-page {
   background-color: var(--color-cv-bg);
+}
+#cv-page {
+  display: block;   /* override لإظهار القسم */
   text-align: center;
   padding: 4rem 1rem;
 }
@@ -166,7 +171,7 @@ nav ul li a i {
   color: #000;
 }
 .cv-btn {
-  /* Enlarge by 4× */
+  /* تكبير الزر 4× */
   transform: scale(4);
   transform-origin: center;
   display: block;
@@ -174,8 +179,4 @@ nav ul li a i {
 }
 .cv-btn:hover {
   background-color: var(--color-primary-darker);
-}
-/* Show the CV section on its standalone page */
-#cv-page {
-  display: block;
 }
