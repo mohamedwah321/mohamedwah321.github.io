@@ -1,17 +1,31 @@
-/* ===== Global Resets ===== */
+/* ================================
+   Variables & Global Resets
+   ================================ */
+:root {
+  --color-primary:   #007ACC;
+  --color-primary-d: #005A99;
+  --color-brown:     #8B4513;
+  --color-brown-h:   #A0522D;
+  --nav-bg:          rgba(255,255,255,0.8);
+  --hero-bg:         #f9f9f9;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+
 body {
   font-family: Arial, sans-serif;
 }
 
-/* ===== 1. Landing Page ===== */
+/* ================================
+   1. Landing Page
+   ================================ */
 #landing {
   position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
+  inset: 0;            /* shorthand for top/right/bottom/left = 0 */
   cursor: pointer;
 }
 #landing img {
@@ -23,24 +37,28 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  color: #ffffff;
+  transform: translate(-50%,-50%);
+  color: #fff;
   font-size: clamp(1rem, 2.5vw, 2.5rem);
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0,0,0,0.6);
   padding: 1rem 2rem;
   border-radius: 0.5rem;
   text-align: center;
   max-width: 90%;
 }
 
-/* ===== 2. Hide Main Content Initially ===== */
+/* ================================
+   2. Hide Main Content Initially
+   ================================ */
 #main-content {
   display: none;
 }
 
-/* ===== 3. Navigation Bar ===== */
+/* ================================
+   3. Navigation Bar
+   ================================ */
 nav {
-  background: #ffffffcc;      /* شفافية بسيطة */
+  background: var(--nav-bg);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -55,89 +73,94 @@ nav ul li + li {
   margin-left: 1rem;
 }
 
-/* ===== 4. Nav Links as Icons/Buttons ===== */
+/* ================================
+   4. Nav Links as Buttons
+   ================================ */
 nav ul li a {
   display: inline-block;
-  font-size: 1.2rem;             /* تكبير نص الأيقونات */
-  padding: 0.75rem 1.25rem;      /* مساحة داخلية أوسع */
-  background-color: #8B4513;     /* لون بني */
-  color: #fff;                   /* نص أبيض */
+  font-size: 1.2rem;
+  padding: 0.75rem 1.25rem;
+  background-color: var(--color-brown);
+  color: #fff;
   border-radius: 0.25rem;
   text-decoration: none;
   transition: background 0.3s ease;
 }
 nav ul li a:hover {
-  background-color: #A0522D;     /* بني أفتح عند المرور */
+  background-color: var(--color-brown-h);
 }
-/* لو تضيف أيقونات (<i>) داخل الروابط */
+/* إذا استعملت أيقونات (<i>) داخل الروابط */
 nav ul li a i {
   font-size: 1.5rem;
   vertical-align: middle;
   margin-right: 0.5rem;
 }
 
-/* ===== 5. Hero Section (Central Avatar) ===== */
+/* ================================
+   5. Hero Section (Central Avatar)
+   ================================ */
 .hero {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh;                  /* تقريب ارتفاع الشاشة */
-  background: #f9f9f9;           /* خلفية خفيفة للتباين */
+  height: 80vh;
+  background: var(--hero-bg);
 }
 .hero .avatar {
-  width: 260px;                  /* تكبير الصورة */
+  width: 260px;
   height: 260px;
   object-fit: cover;
   border-radius: 50%;
-  border: 5px solid #007ACC;     /* إطار أزرق */
+  border: 5px solid var(--color-primary);
 }
 
-/* ===== 6. Placeholder Content Sections ===== */
+/* ================================
+   6. Content Sections (Placeholders)
+   ================================ */
 .content-section {
   min-height: 60vh;
   padding: 2rem 1rem;
-}
-/* ===== Download CV Button ===== */
-.btn-download {
-  display: block;                /* ليملأ عرضًا مع التحكم بالهامش */
-  width: 220px;                  /* يمكنك تعديل العرض حسب الرغبة */
-  margin: 2rem auto;             /* مسافة فوق وتحت، ومركّز أفقيًا */
-  padding: 1rem;                 /* مساحة داخلية */
-  background-color: #007ACC;     /* أزرق واضح */
-  color: #fff;                   /* نص أبيض */
-  text-align: center;            /* تمركز النص */
-  font-size: 1.25rem;            /* حجم الخط */
-  border-radius: 0.5rem;         /* حواف منحنية */
-  text-decoration: none;         /* إزالة الخط السفلي */
-  transition: background 0.3s;
-}
-.btn-download:hover {
-  background-color: #005A99;     /* أزرق أغمق عند المرور */
-}
-/* ===== CV Page Styles ===== */
-.cv-title {
-  font-size: 3rem;       /* ثلاث أضعاف الحجم الافتراضي */
-  text-align: center;
-  margin: 3rem 0 2rem;
+  display: none;       /* إخفاؤها افتراضياً، ثم نظهرها بالـJS */
 }
 
+/* ================================
+   7. Buttons (Shared Styles)
+   ================================ */
+.btn-download,
 .cv-btn {
   display: inline-block;
-  font-size: 2.25rem;    /* ثلاث أضعاف btn الأساسي (~0.75rem) */
-  padding: 1.5rem 3rem;
-  margin: 0 auto;
-  background-color: #007ACC;
+  background-color: var(--color-primary);
   color: #fff;
   text-decoration: none;
   border-radius: 0.5rem;
   transition: background 0.3s;
+  text-align: center;
 }
+.btn-download {
+  display: block;
+  width: 220px;
+  margin: 2rem auto;
+  font-size: 1.25rem;
+  padding: 1rem;
+}
+.cv-btn {
+  font-size: 2.25rem;
+  padding: 1.5rem 3rem;
+  margin: 0 auto;
+}
+.btn-download:hover,
 .cv-btn:hover {
-  background-color: #005A99;
+  background-color: var(--color-primary-d);
 }
 
-/* وسّع أيضاً صندوق المحتوى إن لزم */
+/* ================================
+   8. CV Page Specific Styles
+   ================================ */
 #cv-page {
   text-align: center;
   padding: 4rem 1rem;
+}
+.cv-title {
+  font-size: 3rem;
+  margin: 3rem 0 2rem;
 }
