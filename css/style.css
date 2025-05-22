@@ -8,8 +8,10 @@
   --color-brown-hover:      #A0522D;
   --nav-bg:                 rgba(255,255,255,0.8);
   --hero-bg:                #f9f9f9;
-  --color-cv-bg:            #4682B4;   /* Dark sky-blue */
+  --color-cv-bg:            #4682B4;   /* Dark sky-blue fallback */
   --color-cv-title-bg:      #87CEEB;   /* Light sky-blue */
+  --color-nav-red:          #FF6B6B;
+  --color-nav-red-hover:    #FF4C4C;
 }
 
 * {
@@ -76,33 +78,31 @@ nav ul li + li {
 }
 
 /* ================================
-   4. Nav Links (Circular Icons)
+   4. Nav Links (Better Buttons)
    ================================ */
 nav ul li a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 4rem;
-  height: 4rem;
-  font-size: 2.4rem;
-  background-color: #FF6B6B;             /* Light red */
+  display: inline-block;
+  font-size: 1.6rem;                /* Larger text */
+  padding: 0.75rem 1.5rem;          /* More padding */
+  background-color: var(--color-nav-red);
   color: #fff;
-  border-radius: 50%;                    /* Circle shape */
+  border-radius: 0.5rem;            /* Rounded corners */
   text-decoration: none;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   transition:
     background 0.3s ease,
     transform  0.2s ease,
     box-shadow 0.2s ease;
 }
 nav ul li a:hover {
-  background-color: #FF4C4C;             /* Darker red on hover */
-  transform: scale(1.1);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  background-color: var(--color-nav-red-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 nav ul li a i {
-  font-size: 2.4rem;
-  line-height: 1;
+  font-size: 2rem;
+  vertical-align: middle;
+  margin-right: 0.5rem;
 }
 
 /* ================================
@@ -146,11 +146,11 @@ nav ul li a i {
   text-align: center;
 }
 .btn-download {
-  display: block;
   width: 220px;
   margin: 2rem auto;
   font-size: 1.25rem;
   padding: 1rem;
+  display: block;
 }
 .btn-download:hover {
   background-color: var(--color-primary-darker);
@@ -159,12 +159,18 @@ nav ul li a i {
 /* ================================
    8. CV Page Specific Styles
    ================================ */
+/* ensure .cv-page is on body tag in cv.html */
 body.cv-page {
-  background: url("../images/cv-bg.jpg") no-repeat center center;
+  /* fallback color */
+  background-color: var(--color-cv-bg);
+  /* background image */
+  background-image: url("../images/cv-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
   background-size: cover;
 }
 #cv-page {
-  display: block;   /* override لإظهار القسم */
+  display: block;   /* force visible */
   text-align: center;
   padding: 4rem 1rem;
 }
@@ -178,7 +184,7 @@ body.cv-page {
   color: #000;
 }
 .cv-btn {
-  /* تكبير الزر 4× */
+  /* enlarge 4× */
   transform: scale(4);
   transform-origin: center;
   display: block;
