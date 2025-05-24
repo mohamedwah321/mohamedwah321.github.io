@@ -112,7 +112,7 @@ nav ul li a:hover {
 /* Infographic Container – full width, no padding */
 #exp-infographic {
   display: none;       /* يظل مخفيًا افتراضيًا */
-  width: 80;        /* يملأ عرض نافذة العرض */
+  width: 100;        /* يملأ عرض نافذة العرض */
   margin: 0;           /* يزيل أي هوامش جانبية */
   padding: 0;          /* يزيل أي حشوة جانبية */
   overflow-x: hidden;  /* يمنع شريط تمرير أفقي */
@@ -121,7 +121,7 @@ nav ul li a:hover {
 /* الـ IMG يملأ الحاوية بالعرض */
 #exp-infographic img {
   display: block;      /* يزيل الفراغ أسفل الصورة */
-  width: 80%;         /* يتناسب مع عرض الحاوية */
+  width: 10%;         /* يتناسب مع عرض الحاوية */
   height: auto;        /* يحافظ على تناسب الأبعاد */
   object-fit: cover;   /* يملأ الحاوية بإحكام */
 }
