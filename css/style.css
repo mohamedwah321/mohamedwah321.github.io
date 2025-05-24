@@ -2,16 +2,14 @@
    Variables & Global Resets
    ================================ */
 :root {
-  --color-primary:          #007ACC;
-  --color-primary-darker:   #005A99;
-  --color-brown:            #8B4513;
-  --color-brown-hover:      #A0522D;
-  --nav-bg:                 rgba(255,255,255,0.8);
-  --hero-bg:                #f9f9f9;
-  --color-cv-bg:            #4682B4;   /* Dark sky-blue fallback */
-  --color-cv-title-bg:      #87CEEB;   /* Light sky-blue */
-  --color-nav-red:          #FF6B6B;
-  --color-nav-red-hover:    #FF4C4C;
+  --color-primary:        #007ACC;
+  --color-primary-darker: #005A99;
+  --nav-bg:               rgba(255,255,255,0.8);
+  --hero-bg:              #f9f9f9;
+  --color-cv-bg:          #4682B4;
+  --color-cv-title-bg:    #87CEEB;
+  --nav-red:              #FF6B6B;
+  --nav-red-hover:        #FF4C4C;
 }
 
 * {
@@ -19,14 +17,12 @@
   margin: 0;
   padding: 0;
 }
-
 body {
   font-family: Arial, sans-serif;
+  line-height: 1.5;
 }
 
-/* ================================
-   1. Landing Page
-   ================================ */
+/* 1. Landing Page */
 #landing {
   position: fixed;
   inset: 0;
@@ -41,26 +37,22 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   background: rgba(0,0,0,0.6);
   color: #fff;
   padding: 1rem 2rem;
   border-radius: 0.5rem;
   text-align: center;
-  font-size: clamp(1rem,2.5vw,2.5rem);
+  font-size: clamp(1rem, 2.5vw, 2.5rem);
   max-width: 90%;
 }
 
-/* ================================
-   2. Hide Main Content Initially
-   ================================ */
+/* 2. Hide Main Content Initially */
 #main-content {
   display: none;
 }
 
-/* ================================
-   3. Navigation Bar
-   ================================ */
+/* 3. Navigation Bar */
 nav {
   background: var(--nav-bg);
   position: sticky;
@@ -77,37 +69,24 @@ nav ul li + li {
   margin-left: 1rem;
 }
 
-/* ================================
-   4. Nav Links (Better Buttons)
-   ================================ */
+/* 4. Nav Links as Buttons */
 nav ul li a {
   display: inline-block;
-  font-size: 1.6rem;                /* Larger text */
-  padding: 0.75rem 1.5rem;          /* More padding */
-  background-color: var(--color-nav-red);
+  font-size: 1.6rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--nav-red);
   color: #fff;
-  border-radius: 0.5rem;            /* Rounded corners */
+  border-radius: 0.5rem;
   text-decoration: none;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition:
-    background 0.3s ease,
-    transform  0.2s ease,
-    box-shadow 0.2s ease;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 nav ul li a:hover {
-  background-color: var(--color-nav-red-hover);
+  background-color: var(--nav-red-hover);
   transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-}
-nav ul li a i {
-  font-size: 2rem;
-  vertical-align: middle;
-  margin-right: 0.5rem;
 }
 
-/* ================================
-   5. Hero Section (Central Avatar)
-   ================================ */
+/* 5. Hero Section */
 .hero {
   display: flex;
   justify-content: center;
@@ -123,18 +102,25 @@ nav ul li a i {
   border: 5px solid var(--color-primary);
 }
 
-/* ================================
-   6. Content Sections (Placeholders)
-   ================================ */
+/* 6. Content Sections */
 .content-section {
+  display: none;
   min-height: 60vh;
   padding: 2rem 1rem;
-  display: none;
 }
 
-/* ================================
-   7. Buttons (Shared Styles)
-   ================================ */
+/* 7. Infographic Container */
+#exp-infographic {
+  display: none;
+  text-align: center;
+  padding: 2rem;
+}
+#exp-infographic img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 8. Buttons */
 .btn-download,
 .cv-btn {
   display: inline-block;
@@ -146,31 +132,25 @@ nav ul li a i {
   text-align: center;
 }
 .btn-download {
+  display: block;
   width: 220px;
   margin: 2rem auto;
   font-size: 1.25rem;
   padding: 1rem;
-  display: block;
 }
 .btn-download:hover {
   background-color: var(--color-primary-darker);
 }
 
-/* ================================
-   8. CV Page Specific Styles
-   ================================ */
-/* ensure .cv-page is on body tag in cv.html */
+/* 9. CV Page Specific */
 body.cv-page {
-  /* fallback color */
-  background-color: var(--color-cv-bg);
-  /* background image */
   background-image: url("../images/cv-bg.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
 }
 #cv-page {
-  display: block;   /* force visible */
+  display: block;
   text-align: center;
   padding: 4rem 1rem;
 }
@@ -184,7 +164,6 @@ body.cv-page {
   color: #000;
 }
 .cv-btn {
-  /* enlarge 4× */
   transform: scale(4);
   transform-origin: center;
   display: block;
