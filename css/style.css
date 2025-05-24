@@ -109,15 +109,21 @@ nav ul li a:hover {
   padding: 2rem 1rem;
 }
 
-/* 7. Infographic Container */
+/* Infographic Container – full width, no padding */
 #exp-infographic {
-  display: none;
-  text-align: center;
-  padding: 2rem;
+  display: none;       /* يظل مخفيًا افتراضيًا */
+  width: 100vw;        /* يملأ عرض نافذة العرض */
+  margin: 0;           /* يزيل أي هوامش جانبية */
+  padding: 0;          /* يزيل أي حشوة جانبية */
+  overflow-x: hidden;  /* يمنع شريط تمرير أفقي */
 }
+
+/* الـ IMG يملأ الحاوية بالعرض */
 #exp-infographic img {
-  max-width: 100%;
-  height: auto;
+  display: block;      /* يزيل الفراغ أسفل الصورة */
+  width: 100%;         /* يتناسب مع عرض الحاوية */
+  height: auto;        /* يحافظ على تناسب الأبعاد */
+  object-fit: cover;   /* يملأ الحاوية بإحكام */
 }
 
 /* 8. Buttons */
