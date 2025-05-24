@@ -17,6 +17,7 @@
   margin: 0;
   padding: 0;
 }
+
 body {
   font-family: Arial, sans-serif;
   line-height: 1.5;
@@ -109,21 +110,20 @@ nav ul li a:hover {
   padding: 2rem 1rem;
 }
 
-/* Infographic Container – full width, no padding */
+/* 7. Infographic Container – center and 90% width */
 #exp-infographic {
-  display: none;       /* يظل مخفيًا افتراضيًا */
-  width: 100;        /* يملأ عرض نافذة العرض */
-  margin: 0;           /* يزيل أي هوامش جانبية */
-  padding: 0;          /* يزيل أي حشوة جانبية */
-  overflow-x: hidden;  /* يمنع شريط تمرير أفقي */
+  display: none;        /* يظل مخفيًا افتراضيًا */
+  width: 90%;           /* يملأ 90% من عرض الحاوية */
+  max-width: 1600px;    /* حد أقصى لمنع الاتساع الزائد */
+  margin: 2rem auto;    /* مركّز أفقيًا مع هامش علوي */
+  padding: 0;
 }
 
-/* الـ IMG يملأ الحاوية بالعرض */
+/* Image يملأ الحاوية بالعرض */
 #exp-infographic img {
-  display: block;      /* يزيل الفراغ أسفل الصورة */
-  width: 10%;         /* يتناسب مع عرض الحاوية */
-  height: auto;        /* يحافظ على تناسب الأبعاد */
-  object-fit: cover;   /* يملأ الحاوية بإحكام */
+  display: block;       /* يزيل الفراغ أسفل الصورة */
+  width: 100%;          /* يتناسب مع عرض الحاوية */
+  height: auto;         /* يحافظ على تناسب الأبعاد */
 }
 
 /* 8. Buttons */
