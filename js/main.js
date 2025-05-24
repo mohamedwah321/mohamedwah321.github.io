@@ -1,7 +1,9 @@
 document.addEventListener("DOMContentLoaded", function() {
-  // 1. Landing → Main Content
   const landing = document.getElementById("landing");
   const mainContent = document.getElementById("main-content");
+  const infographic = document.getElementById("exp-infographic");
+
+  // 1. إخفاء landing وأظهار المحتوى الرئيسي
   if (landing && mainContent) {
     landing.addEventListener("click", function() {
       landing.style.display = "none";
@@ -9,23 +11,31 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 
-  // 2. Toggle sections on index.html via nav links (href="#…")
-  if (mainContent) {
-    const links = document.querySelectorAll('nav ul li a[href^="#"]');
-    links.forEach(link => {
-      link.addEventListener("click", function(e) {
-        e.preventDefault();
-        // Hide hero + all sections
-        document.querySelector(".hero").style.display = "none";
-        document.querySelectorAll(".content-section").forEach(sec => {
-          sec.style.display = "none";
-        });
-        // Show target section
-        const targetId = this.getAttribute("href").slice(1);
+  // 2. ربط روابط التنقل
+  const links = document.querySelectorAll('nav ul li a');
+  links.forEach(link => {
+    link.addEventListener("click", function(e) {
+      const href = this.getAttribute("href");
+      
+      // إذا الرابط يؤشر إلى صفحة خارجية (cv.html) فاتركه
+      if (!href.startsWith("#")) return;
+
+      e.preventDefault();
+
+      // أخفِ الهيرو وجميع الأقسام والإنفوجراف
+      document.querySelector(".hero").style.display = "none";
+      document.querySelectorAll(".content-section").forEach(sec => sec.style.display = "none");
+      infographic.style.display = "none";
+
+      // إذا نقرة الخبرة
+      if (this.id === "link-experience") {
+        infographic.style.display = "block";
+      } else {
+        // أقسام أخرى بالاعتماد على المعرف (#projects, #courses…)
+        const targetId = href.slice(1);
         const section = document.getElementById(targetId);
         if (section) section.style.display = "block";
-      });
+      }
     });
-  }
+  });
 });
-
