@@ -228,4 +228,48 @@ body.cv-page {
 nav ul li a.active {
   background-color: var(--nav-red-hover);
 }
+/* شبكة أيقونات المشاريع / الكورسات / المهارات */
+.projects-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.projects-container h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-primary);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-color: var(--hero-bg);
+  border: 2px solid var(--color-primary);
+  border-radius: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--color-primary);
+  text-decoration: none;
+  text-align: center;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.project-icon:hover {
+  background-color: #eaf4fc;
+  transform: translateY(-4px);
+}
+
+nav ul li a.active {
+  background-color: var(--nav-red-hover);
+}
 
