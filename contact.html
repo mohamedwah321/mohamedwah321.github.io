@@ -5,6 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact – Mohammed Wahdan</title>
   <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* تخصيص حجم ونمط نص معلومات الاتصال */
+    .contact-container {
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      text-align: center;
+    }
+    .contact-container h1 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      color: var(--color-primary);
+    }
+    .contact-details p {
+      font-size: 1.5rem;
+      margin: 1rem 0;
+      line-height: 1.4;
+      color: #333;
+    }
+    .contact-details p strong {
+      color: var(--color-primary);
+    }
+  </style>
 </head>
 <body>
 
@@ -20,29 +43,15 @@
     </ul>
   </nav>
 
-  <!-- ===== محتوى صفحة الاتصال ===== -->
+  <!-- ===== محتوى صفحة الاتصال (بيانات التواصل فقط) ===== -->
   <main class="contact-container">
-    <h1>Contact Me</h1>
+    <h1>Contact Information</h1>
 
-    <form action="mailto:mohammedwahdan321@gmail.com" method="post" enctype="text/plain" class="contact-form">
-      <label for="name">Name</label>
-      <input type="text" id="name" name="Name" placeholder="Your Name" required />
-
-      <label for="email">Email</label>
-      <input type="email" id="email" name="Email" placeholder="Your Email" required />
-
-      <label for="message">Message</label>
-      <textarea id="message" name="Message" placeholder="Your Message" rows="6" required></textarea>
-
-      <button type="submit" class="btn-submit">Send Message</button>
-    </form>
-
-    <!-- معلومات إضافية (اختياري) -->
-    <section class="contact-info">
+    <div class="contact-details">
       <p><strong>Email:</strong> mohammedwahdan321@gmail.com</p>
       <p><strong>Phone:</strong> +20 101 737 8699 / +966 508 378 517</p>
       <p><strong>Location:</strong> Sakaka City, Al-Jouf, Saudi Arabia</p>
-    </section>
+    </div>
   </main>
 
 </body>
